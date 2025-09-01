@@ -1,11 +1,10 @@
 import { Badge } from '@/components/ui/badge';
 import MyAlertDialog from './MyAlertDialog';
 
-const Hero = () => {
+const MyHero = () => {
   return (
     <div id='about_us' className="flex items-center justify-center">
       <div className="mx-auto grid w-full max-w-screen-xl items-center gap-12 px-6 py-16 lg:grid-cols-2">
-        
         {/* Left Content (Image) */}
         <div className="w-full">
           <img
@@ -14,7 +13,6 @@ const Hero = () => {
             className="aspect-video w-full rounded-xl object-cover"
           />
         </div>
-
         {/* Right Content */}
         <div>
           <Badge className="rounded-full border-none bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-500 py-1">
@@ -55,4 +53,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default MyHero;

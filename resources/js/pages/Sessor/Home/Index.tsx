@@ -4,12 +4,12 @@ import BgFooter from '../components/BgFooter';
 import BlogHeader from '../components/BlogHeader';
 import Contact from '../components/Contact';
 import FAQSection from '../components/FAQSection';
-import Hero from '../components/hero';
 import MyFeatures from '../components/MyFeatures';
 import ShapeDividerBottom from '../components/ShapeDividerBottom';
 import ShapeDividerTop from '../components/ShapeDividerTop';
 import SingleVideoPopup from '../components/Video';
 import MyAlertDialog from '../components/MyAlertDialog';
+import MyHero from '../components/MyHero';
 
 const Index = () => {
     return (
@@ -50,7 +50,7 @@ const Index = () => {
                 {/* Wave Shape Divider */}
                 <ShapeDividerBottom />
             </div>
-            <Hero />
+            <MyHero />
             <Applex />
             <MyFeatures />
             <FAQSection />

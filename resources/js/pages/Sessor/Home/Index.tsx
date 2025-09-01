@@ -1,36 +1,37 @@
 import MySlide from '@/components/my-slide';
 import Applex from '../components/Applex';
+import BgFooter from '../components/BgFooter';
 import BlogHeader from '../components/BlogHeader';
+import Contact from '../components/Contact';
 import FAQSection from '../components/FAQSection';
+import Hero from '../components/hero';
 import MyFeatures from '../components/MyFeatures';
 import ShapeDividerBottom from '../components/ShapeDividerBottom';
 import ShapeDividerTop from '../components/ShapeDividerTop';
 import SingleVideoPopup from '../components/Video';
-import Stats from '../components/Stats';
-import Contact from '../components/Contact';
-import BgFooter from '../components/BgFooter';
+import MyAlertDialog from '../components/MyAlertDialog';
 
 const Index = () => {
-    
     return (
         <>
             <BlogHeader />
-
             <div className="relative bg-gradient-to-r from-purple-600 to-indigo-500 text-white">
                 {/* Hero Section */}
                 <section className="container mx-auto flex flex-col items-center justify-between px-8 py-6 md:flex-row">
                     {/* Left Content */}
                     <div className="space-y-6">
-                        <h1 className="text-4xl leading-tight font-extrabold md:text-5xl">
-                            Awesome App <br /> Landing Page
-                        </h1>
-                        <p className="text-gray-200">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                            dummy text ever since the 1500s,
+                        <h1 className="text-4xl leading-tight font-extrabold md:text-5xl">About Us</h1>
+                        <p className="text-gray-200 line-clamp-4">
+                            SESOR Express is a subsidiary company of Westec Corporation with roots deeply planted in Cambodia's business landscape for
+                            16 years. Our management team comprises seasoned entrepreneurs and tech experts from diverse backgrounds, collectively
+                            bringing a wealth of hands-on experience to the table.
                         </p>
-                        <button className="mt-4 rounded-full border-2 border-white px-6 py-3 font-medium transition hover:bg-white hover:text-purple-600">
-                            Start Now for Free!
-                        </button>
+                        {/* <button className="mt-4 rounded-full border-2 border-white px-6 py-3 font-medium transition hover:bg-white hover:text-purple-600">
+                            Read More
+                        </button> */}
+                        <div className='mt-4'>
+                            <MyAlertDialog />
+                        </div>
                     </div>
 
                     {/* Right Content (Phone Mockup) */}
@@ -49,6 +50,7 @@ const Index = () => {
                 {/* Wave Shape Divider */}
                 <ShapeDividerBottom />
             </div>
+            <Hero />
             <Applex />
             <MyFeatures />
             <FAQSection />
@@ -60,7 +62,7 @@ const Index = () => {
                     <div className="relative mx-auto max-w-3xl text-center">
                         <h2 className="relative z-1 inline-block text-2xl font-extrabold md:text-4xl">
                             App Working
-                            <span className="absolute -bottom-3 left-4/6 -z-1 h-[64px] w-[72px] -translate-x-1/2 rounded-tl-[36px] rounded-br-[36px] bg-purple-500"></span>
+                            <span className="absolute -bottom-2 md:-bottom-3 left-4/8 -z-1 h-[54px] w-[52px] md:h-[64px] md:w-[72px] -translate-x-1/2 rounded-tl-[26px] rounded-br-[26px] md:rounded-tl-[36px] md:rounded-br-[36px] bg-purple-500"></span>
                         </h2>
                         <p className="mt-4 md:text-lg">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, sunt
@@ -72,9 +74,9 @@ const Index = () => {
                     </div>
                 </section>
             </div>
-            <Stats/>
-            <Contact/>
-            <BgFooter/>
+            {/* <Stats/> */}
+            <Contact />
+            <BgFooter />
         </>
     );
 };

@@ -1,5 +1,6 @@
 'use client';
 
+import MySelectLanguageSwitch from '@/components/my-select-language-switch';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -7,13 +8,13 @@ const BlogHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { href: '#', text: 'Home' },
-        { href: '#', text: 'About Us' },
-        { href: '#', text: 'Our Services' },
-        { href: '#', text: 'Our Mobile App' },
-        { href: '#', text: 'Driver Programs' },
-        { href: '#', text: 'Reward Programs' },
-        { href: '#', text: 'Contact' },
+        { href: '/', text: 'Home' },
+        { href: '#about_us', text: 'About Us' },
+        { href: '#our_services', text: 'Our Services' },
+        { href: '#our_mobile_app', text: 'Our Mobile App' },
+        { href: '#driver_programs', text: 'Driver Programs' },
+        { href: '#reward_programs', text: 'Reward Programs' },
+        { href: '#contact', text: 'Contact' },
     ];
 
     useEffect(() => {
@@ -46,17 +47,16 @@ const BlogHeader = () => {
                                     {link.text}
                                 </a>
                             ))}
+                            <MySelectLanguageSwitch />
                         </nav>
 
                         {/* Mobile Menu Button */}
-                        <div className="flex items-center lg:hidden">
-                            <button
-                                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                                className="rounded-md p-2 text-white hover:bg-gray-100 dark:hover:bg-gray-800"
-                                aria-label="Toggle menu"
-                            >
+                        <div className="flex items-center gap-2 lg:hidden">
+                            <MySelectLanguageSwitch />
+
+                            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="rounded-md p-2 text-white" aria-label="Toggle menu">
                                 <Menu
-                                    className={`h-6 w-6 transition-transform duration-300 ${isMenuOpen ? 'scale-0 rotate-90' : 'scale-100 rotate-0'}`}
+                                    className={`h-7 w-7 transition-transform duration-300 ${isMenuOpen ? 'scale-0 rotate-90' : 'scale-100 rotate-0'}`}
                                 />
                                 {/* <X
                   className={`h-6 w-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ${

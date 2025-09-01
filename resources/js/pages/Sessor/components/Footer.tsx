@@ -3,16 +3,17 @@ import { Facebook, Instagram, LinkedinIcon, Youtube } from 'lucide-react';
 
 const Footer = () => {
     const footerLinks = [
-    { name: "Home", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "Our Services", href: "#" },
-    { name: "Our Mobile App", href: "#" },
-    { name: "Driver Programs", href: "#" },
-    { name: "Reward Programs", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "#about_us" },
+    { name: "Our Services", href: "#our_services" },
+    { name: "Our Mobile App", href: "#our_mobile_app" },
+    { name: "Driver Programs", href: "#driver_programs" },
+    { name: "Reward Programs", href: "#reward_programs" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const socialIcons = [
-    { label: "Facebook", icon: <Facebook />, href: "#" },
+    { label: "Facebook", icon: <Facebook />, href: "https://www.facebook.com/SESORexpress/" },
     { label: "Instagram", icon: <Instagram />, href: "#" },
     { label: "LinkedIn", icon: <LinkedinIcon />, href: "#" },
     { label: "YouTube", icon: <Youtube />, href: "#" },
